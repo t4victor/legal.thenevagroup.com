@@ -1,0 +1,169 @@
+---
+
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Oficina3 - Documentos Legales</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+				line-height: 1.6;
+				color: #333;
+				background-color: #f8f9fa;
+			}
+			
+			.container {
+				max-width: 80%;
+				margin: 0 auto;
+				padding: 2rem;
+				min-height: 100vh;
+			}
+			
+			.header {
+				text-align: center;
+				margin-bottom: 3rem;
+				padding-top: 2rem;
+			}
+			
+			.logo {
+				font-size: 2.5rem;
+				font-weight: bold;
+				color: #2c3e50;
+				margin-bottom: 0.5rem;
+			}
+			
+			.subtitle {
+				font-size: 1.2rem;
+				color: #7f8c8d;
+				margin-bottom: 2rem;
+			}
+			
+			.back-link {
+				display: inline-block;
+				margin-bottom: 2rem;
+				color: #3498db;
+				text-decoration: none;
+				font-weight: 500;
+			}
+			
+			.back-link:hover {
+				text-decoration: underline;
+			}
+			
+			.documents-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+				margin-bottom: 3rem;
+			}
+			
+			.document-card {
+				background: white;
+				border-radius: 10px;
+				padding: 2rem;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+			
+			.document-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+			}
+			
+			.document-link {
+				text-decoration: none;
+				color: inherit;
+			}
+			
+			.document-title {
+				font-size: 1.3rem;
+				font-weight: bold;
+				color: #2c3e50;
+				margin-bottom: 1rem;
+			}
+			
+			.document-description {
+				color: #7f8c8d;
+				font-size: 0.95rem;
+			}
+			
+			.footer {
+				text-align: center;
+				color: #7f8c8d;
+				font-size: 0.9rem;
+				padding-top: 2rem;
+				border-top: 1px solid #ecf0f1;
+			}
+			
+			@media (max-width: 768px) {
+				.container {
+					max-width: 95%;
+					padding: 1rem;
+				}
+				
+				.logo {
+					font-size: 2rem;
+				}
+				
+				.documents-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<a href="/" class="back-link">← Volver al inicio</a>
+			
+			<div class="header">
+				<h1 class="logo">Oficina3</h1>
+				<p class="subtitle">Documentos Legales</p>
+			</div>
+			
+			<div class="documents-grid">
+				<div class="document-card">
+					<a href="/oficina3/politica_de_privacidad" class="document-link">
+						<h3 class="document-title">Política de Privacidad</h3>
+						<p class="document-description">
+							Información sobre cómo recopilamos, utilizamos y protegemos tus datos personales.
+						</p>
+					</a>
+				</div>
+				
+				<div class="document-card">
+					<a href="/oficina3/aviso_legal" class="document-link">
+						<h3 class="document-title">Aviso Legal</h3>
+						<p class="document-description">
+							Términos y condiciones de uso del sitio web y servicios ofrecidos.
+						</p>
+					</a>
+				</div>
+				
+				<div class="document-card">
+					<a href="/oficina3/politica_de_cookies" class="document-link">
+						<h3 class="document-title">Política de Cookies</h3>
+						<p class="document-description">
+							Información sobre el uso de cookies y tecnologías similares en nuestro sitio.
+						</p>
+					</a>
+				</div>
+			</div>
+			
+			<div class="footer">
+				<p>&copy; {new Date().getFullYear()} Oficina3 Real Estate. Todos los derechos reservados.</p>
+				<p>&copy; {new Date().getFullYear()} The Neva Group. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</body>
+</html>

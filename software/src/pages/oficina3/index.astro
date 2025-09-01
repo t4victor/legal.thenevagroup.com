@@ -39,7 +39,7 @@
 			.logo {
 				font-size: 2.5rem;
 				font-weight: bold;
-				color: #2c3e50;
+				color: black;
 				margin-bottom: 0.5rem;
 			}
 			
@@ -68,17 +68,38 @@
 				margin-bottom: 3rem;
 			}
 			
-			.document-card {
+						.document-card {
 				background: white;
 				border-radius: 10px;
 				padding: 2rem;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
+				position: relative;
+				transition: transform 0.2s ease;
+				border: none;
 			}
-			
+
+			.document-card::after {
+				content: '';
+				position: absolute;
+				bottom: -4px;
+				right: -4px;
+				width: 100%;
+				height: 100%;
+				background: white;
+				border-radius: 10px;
+				border-bottom: 4px solid #5591c5;
+				border-right: 4px solid #5591c5;
+				z-index: -1;
+				transition: border 0.2s ease;
+			}
+
 			.document-card:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+				transform: translate(4px, 4px);
+			}
+
+			.document-card:hover::after {
+				border-bottom: none;
+				border-right: none;
 			}
 			
 			.document-link {
@@ -127,8 +148,8 @@
 			<a href="/" class="back-link">← Volver al inicio</a>
 			
 			<div class="header">
-				<h1 class="logo">Oficina3</h1>
-				<p class="subtitle">Documentos Legales</p>
+				<h1 class="logo">Oficina3 - Real Estate</h1>
+				<p class="subtitle">Oficina 3 - Real Estate forma parte del grupo Oficina3. Es una división de la compañía encargada de la compra, revisión, certificación y venta de bienes inmuebles.</p>
 			</div>
 			
 			<div class="documents-grid">
@@ -161,9 +182,9 @@
 			</div>
 			
 			<div class="footer">
-				<p>&copy; {new Date().getFullYear()} Oficina3 Real Estate. Todos los derechos reservados.</p>
-				<p>&copy; {new Date().getFullYear()} The Neva Group. Todos los derechos reservados.</p>
-			</div>
+				<p>&copy; {new Date().getFullYear()} The Neva Group. Todos los derechos reservados. Textos, imágenes y demás contenidos protegidos por la legislación vigente.</p>
+			  </div>
+			  
 		</div>
 	</body>
 </html>
